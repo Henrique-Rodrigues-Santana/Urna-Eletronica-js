@@ -13,6 +13,7 @@ function comecarEtapa(){
     let etapa = etapas[etapaAtual];
 
     let numeroHtml = '';
+    /*armazena os numeros da urna */
     let numero = '';
 
     for(let i = 0; i < etapa.numeros;i++){
@@ -34,7 +35,7 @@ function comecarEtapa(){
 }
 
 function atualizaInterface(){
-    
+    console.log(numeroOO);
 }
 
 
@@ -42,11 +43,13 @@ function clicou(n){
     let elnumero = document.querySelector('.numero.pisca');
     if(elnumero !== null){
         elnumero.innerHTML = n;
-        numero = '${numero}${n}';
-        /*removendo uma class da class pai */
+        numeroOO = '${numero}${n}';
+
         elnumero.classList.remove('pisca');
-        /* retornando a class pisca a class pai  */
-        /*primeiro verificar se há um proximo elemento */
+
+
+
+
         if( elnumero.nextElementSibling !== null){
         elnumero.nextElementSibling.classList.add('pisca');
         }else{
